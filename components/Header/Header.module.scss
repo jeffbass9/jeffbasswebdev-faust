@@ -1,72 +1,39 @@
 @import 'styles/breakpoints';
+@import 'styles/variables';
 
-.component {
-	color: var(--wpe--header--color);
-	background-color: var(--wpe--header--background-color);
-	position: relative;
-	z-index: 2; // Pull dropdown menus to the foreground to sit above <Main />.
-}
-
-.navbar {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding: 3rem 0;
-	gap: 1rem;
-}
-
-.brand {
-	font-weight: var(--wpe--font-weight--bold);
-	font-size: 1.6rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.title {
-	text-decoration: none;
-}
-
-.description {
-	margin: .3rem 0 0 0;
-	font-size: 0.8rem;
-	opacity: 0.9;
-}
-
-.nav-toggle {
-	align-items: center;
-	background-color: transparent;
-	border: 0.1rem solid var(--wpe--color--white);
-	color: var(--wpe--color--black);
-	cursor: pointer;
-	display: flex;
-	margin: 0;
-	padding: 0.5rem 1rem;
-	transition: all 0.2s ease-in;
-	user-select: none;
-	font-size: 2rem;
-
-	&:hover,
-	&:focus {
-		background-color: var(--wpe--color--white);
-		color: var(--wpe--color--black);
-	}
-
-	@media (min-width: $breakpoint-small) {
-		display: none !important;
-	}
-}
-
-.primary-navigation {
-	display: none;
+.jb-header{
+	display: inline-block;
 	width: 100%;
-
-	&.show {
-		display: block;
+	padding: 1em;
+	margin: auto;
+	background: linear-gradient(to right, $primary-color 0%,$secondary-color 50%,$primary-color 100% ); 
+	background-size: $bgWidth 100%;
+	animation: background-pulse 15s linear infinite ;
+	&__heading{
+	  text-align: center;
+	  @media screen and (min-width: $breakpoint-med){
+		display: flex;
+		justify-content: space-between;
+	  }
+	  h1, h2{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	  }
 	}
-
-	@media (min-width: $breakpoint-small) {
-		display: block;
-		width: auto;
+  }
+  
+  body {
+  
+  }
+  
+  @keyframes background-pulse{
+	0%{
+	  background-position-x: 0;
 	}
-}
+  
+	100%{
+	  background-position-x: $bgWidth;
+	}
+  }
+  

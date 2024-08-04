@@ -1,0 +1,29 @@
+.jb-skills{
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  ul{
+    columns: 2;
+    padding: 0 0 0 2em;
+  }
+  li{
+    margin-right: 1em;
+  }
+  &__inner{
+    display: inline-block;
+    margin: 2em;
+    border: solid 5px white;
+    @media screen and (min-width: $breakpoint-small){
+      margin: 2em auto;
+    }
+    width: 100%;
+    max-width: $max-width;
+    padding: 1em;
+    // background-color: white;
+    &__text{
+      background-color: white;
+      box-sizing: border-box;
+      padding: 1em;
+    }
+  }
+}

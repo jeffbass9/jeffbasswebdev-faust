@@ -1,0 +1,76 @@
+.jb-portfolio{
+  position: relative;
+  display: inline-block;
+  max-width: $max-width;
+  padding: 1em;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: black;
+  h2{
+    color: white;
+  }
+  &__item{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    @media screen and (min-width: $breakpoint-med){
+      display: inline-block;
+      margin-bottom: 2em;
+    }
+    &_left{
+      @media screen and (min-width: $breakpoint-med){
+        text-align: right;
+      }
+      .jb-portfolio__item__text{
+        @media screen and (min-width: $breakpoint-med){
+          left: 0;
+          top: 80px;
+        }
+      }
+    }
+    &_right{
+      @media screen and (min-width: $breakpoint-med){
+        text-align: left;
+      }
+      .jb-portfolio__item__text{
+        @media screen and (min-width: $breakpoint-med){
+          right: 0;
+          top: 80px;
+        }
+      }
+    }
+    &__text{
+      display: inline-block;
+      width: 100%;
+      max-width: 100%;
+      text-align: left;
+      @media screen and (min-width: $breakpoint-med){
+        width: 40%;
+        position: absolute;
+        z-index: 2;
+        background: white;
+      }
+      padding: 1em;
+      // margin: 1em;
+      border: solid 5px black;
+      // background: rgb(0,183,181);
+      // background: linear-gradient(55deg, rgba(0,183,181,1) 0%, rgba(9,184,82,1) 100%);
+    }
+    &__image{
+      display: inline-block;
+      width: 100%;
+      height: auto;
+      @media screen and (min-width: $breakpoint-med){
+        width: 80%;
+      }
+      margin: 1em 0;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

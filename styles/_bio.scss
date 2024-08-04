@@ -1,0 +1,23 @@
+.jb-bio{
+  padding: 1em;
+  max-width: $max-width;
+  margin: auto;
+  &__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 1em;
+    color: white;
+    p{
+      @media screen and (min-width: $breakpoint-med){
+        font-size: 1.6em;
+      }
+    }
+    h2{
+      font-size: 1.75em;
+    }
+  }
+  &__buttons{
+    display: flex;
+  }
+}
